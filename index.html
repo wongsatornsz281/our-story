@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07030f">
+  <meta name="robots" content="noindex, nofollow">
+  <title>มีบางอย่างรอเธออยู่ ✨</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💌%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&family=Charm:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-BicVgdjp.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BezS2Sez.css">
+</head>
+<body>
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <main id="ui">
+    <!-- 1. ประตู: ตอบคำถามที่รู้กันสองคน -->
+    <section class="screen" data-screen="gate">
+      <div class="gate-card glass">
+        <div class="lock-ic" aria-hidden="true">💌</div>
+        <p class="whisper">มีบางอย่างที่อยากให้เธอเห็น…</p>
+        <h1 class="question" data-question>…</h1>
+        <form data-gate-form autocomplete="off">
+          <input data-answer type="text" placeholder="พิมพ์คำตอบ" aria-label="คำตอบ" autocapitalize="off" spellcheck="false" enterkeyhint="go">
+          <button class="btn glow" type="submit" data-open>เปิด ✨</button>
+        </form>
+        <p class="gate-msg" data-gate-msg aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- 2. แตะเพื่อเริ่ม (เบราว์เซอร์ต้องให้แตะก่อนจึงเปิดเพลงได้) -->
+    <section class="screen" data-screen="tap" hidden>
+      <button class="tap-start" type="button" data-tap>
+        <span class="pulse-heart" aria-hidden="true">❤</span>
+        <span class="tap-title">ถูกต้อง! เก่งมาก 🥰</span>
+        <span class="tap-sub">แตะที่หัวใจเพื่อเริ่ม · เปิดเสียงด้วยน้า 🎧</span>
+      </button>
+    </section>
+
+    <!-- 3. ท้องฟ้าของเรา -->
+    <section class="screen" data-screen="sky" hidden>
+      <div class="sky-top">
+        <p class="names" data-names></p>
+        <div class="together glass">
+          <span class="together-label">เราอยู่ด้วยกันมาแล้ว</span>
+          <span class="together-count" data-count></span>
+        </div>
+      </div>
+      <div class="intro" data-intro></div>
+      <button class="btn glow next-chapter" type="button" data-go="timeline" hidden>ย้อนดูเรื่องราวของเรา →</button>
+    </section>
+
+    <!-- 4. เส้นทางความทรงจำ -->
+    <section class="screen" data-screen="timeline" hidden>
+      <div class="mem-card glass" data-mem-card>
+        <p class="mem-date" data-mem-date></p>
+        <h2 class="mem-title" data-mem-title></h2>
+        <p class="mem-place" data-mem-place></p>
+        <p class="mem-text" data-mem-text></p>
+      </div>
+      <nav class="mem-nav">
+        <button class="round" type="button" data-mem-prev aria-label="ก่อนหน้า">‹</button>
+        <div class="mem-dots" data-mem-dots></div>
+        <button class="round" type="button" data-mem-next aria-label="ถัดไป">›</button>
+      </nav>
+      <p class="swipe-hint">ปัด / เลื่อน / แตะ › เพื่อไปต่อ</p>
+    </section>
+
+    <!-- 5. ควิซเรื่องของเรา -->
+    <section class="screen" data-screen="quiz" hidden>
+      <div class="quiz-card glass">
+        <div class="quiz-hearts" data-quiz-hearts aria-label="ความคืบหน้า"></div>
+        <p class="quiz-step" data-quiz-step></p>
+        <h2 class="quiz-q" data-quiz-q></h2>
+        <div class="quiz-choices" data-quiz-choices></div>
+        <p class="quiz-reply" data-quiz-reply aria-live="polite"></p>
+        <button class="btn glow" type="button" data-quiz-next hidden>ข้อต่อไป →</button>
+      </div>
+    </section>
+
+    <!-- 6. จดหมาย: ซองเปิด → กระดาษเลื่อนออก → กระดาษแผ่นเดิมบินมากางเต็มจอ (ไม่มีการสลับชิ้น) -->
+    <section class="screen" data-screen="letter" hidden>
+      <p class="letter-hint" data-letter-hint>มีจดหมายถึงเธอ 1 ฉบับ 💌 แตะที่ซองเพื่อเปิดนะ</p>
+      <div class="env-float" data-env-float>
+        <div class="envelope" data-envelope role="button" tabindex="0" aria-label="เปิดซองจดหมาย">
+          <div class="env-back"></div>
+          <div class="paper" data-paper>
+            <div class="paper-inner" data-paper-inner>
+              <p class="to" data-letter-to></p>
+              <div class="body" data-letter-body></div>
+              <p class="from" data-letter-from></p>
+              <div class="paper-actions"><button class="btn glow" type="button" data-go="finale" hidden>อีกนิดเดียว… →</button></div>
+            </div>
+          </div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+          <div class="seal" aria-hidden="true">❤</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. ตอนจบ -->
+    <section class="screen" data-screen="finale" hidden>
+      <h1 class="finale-title" data-finale-title></h1>
+      <p class="finale-years" data-finale-years></p>
+      <figure class="polaroid finale-photo" data-finale-figure hidden><img data-finale-photo alt=""><figcaption data-finale-cap></figcaption></figure>
+      <p class="finale-text" data-finale-text></p>
+      <button class="btn ghost" type="button" data-replay>ดูอีกครั้ง ↺</button>
+    </section>
+  </main>
+
+  <button class="music-btn" type="button" data-music hidden aria-label="เปิด/ปิดเพลง">♪</button>
+</body>
+</html>
